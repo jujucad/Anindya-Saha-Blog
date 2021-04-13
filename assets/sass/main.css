@@ -2635,11 +2635,7 @@ button:disabled,
 
 /* Header */
 .sticky {
-  position: fixed !important;
-  top: 0;
-  Width: 100em;
-  background-color: #fff;
-  z-index: 1;
+  background-color: #FFF;
 }
 
 #header {
@@ -2648,7 +2644,9 @@ button:disabled,
   display: flex;
   border-bottom: solid 5px #19AA8D;
   padding: 2em 0 1em 0;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 #header > * {
   -moz-flex: 1;

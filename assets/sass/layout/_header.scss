@@ -5,18 +5,17 @@
 ///
 
 /* Header */
-.sticky {
-	position: fixed !important;
-	top: 0;
-	Width: 100em;
-	background-color: #fff;
-	z-index: 1;
-  }
+ .sticky {
+ 	background-color: #FFF;
+   }
 	#header {
 		@include vendor('display', 'flex');
 		border-bottom: solid 5px _palette(accent);
 		padding: 2em 0 1em 0;
-		position: relative;
+		position: sticky;
+		top:0;
+		z-index: 1;
+
 
 		> * {
 			@include vendor('flex', '1');
