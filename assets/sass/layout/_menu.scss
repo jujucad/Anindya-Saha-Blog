@@ -81,6 +81,7 @@
 					margin: 0.5em 0 1.5em 0;
 					padding-left: 2em;
 					border-left: solid 3px _palette(accent);
+					position:relative;
 					
 
 					a, span {
@@ -88,9 +89,27 @@
 						margin-left: 1em;
 						
 					}
-					
+					li::before{
+						content:'';
+						position: absolute;
+						width: 2px;
+						height:2.6em;
+						background-color: _palette(side-tl);
+						left:6.8%;
+					}
+					li::after{
+						content:'';
+						position: absolute;
+						width: 6px;
+						height:6px;
+						background-color: _palette(side-tl);
+						border-radius: 50%;
+						left:6%;
+						transform: translateY(-16px);
+					}
+
 					 li{
-					 	list-style-type: circle;
+					 	// list-style-type: circle;
 					 	// border-left: solid 3px _palette(accent);
 					
 					 }
