@@ -17,7 +17,7 @@
 			margin-bottom: 0;
 			padding: 0;
 			text-transform: uppercase;
-
+			
 			a, span {
 				border-bottom: 0;
 				color: inherit;
@@ -104,8 +104,13 @@
 						height:6px;
 						background-color: _palette(side-tl);
 						border-radius: 50%;
-						left:6%;
-						transform: translateY(-16px);
+						left:6.5%;
+						transform: translateY(-1.25em);
+					}
+					@media only screen and (max-width: 1280px){
+						li::after{
+							left:6%;
+						}
 					}
 
 					 li{
@@ -140,9 +145,11 @@
 			margin-bottom: 10em;
 		img{
 			max-width: 140px;
+			border-radius: 50%;
+			margin-bottom: 1.5em;
 		}
 		p{
-			margin-left: 1em;
+			margin-left: .6em;
 			line-height: 0.5em;
 			color: map-get($palette,txt-one);
 		}

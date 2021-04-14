@@ -2468,7 +2468,18 @@ button:disabled,
   background-color: #2A3F54;
   font-size: 0.9em;
   position: relative;
-  width: 26em;
+  width: 30em;
+}
+#sidebar .social {
+  font-size: 3em;
+  height: 100px;
+  background-color: #172D44;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#sidebar .category a {
+  margin: 0.5em 0.3em;
 }
 #sidebar h2 {
   font-size: 1.3888888889em;
@@ -2476,10 +2487,9 @@ button:disabled,
 #sidebar > .inner {
   padding: 2.2222222222em 2.2222222222em 2.4444444444em 2.2222222222em;
   position: relative;
-  width: 26em;
+  width: 30em;
 }
 #sidebar > .inner > * {
-  border-bottom: solid 2px rgba(210, 215, 217, 0.75);
   margin: 0 0 3.5em 0;
   padding: 0 0 3.5em 0;
 }
@@ -2505,7 +2515,7 @@ button:disabled,
   border: 0;
   display: block;
   height: 7.5em;
-  left: 26em;
+  left: 30em;
   line-height: 7.5em;
   outline: 0;
   overflow: hidden;
@@ -2537,11 +2547,11 @@ button:disabled,
   line-height: inherit;
   position: absolute;
   text-indent: 0;
-  top: 0;
+  top: 5.5px;
   width: inherit;
 }
 #sidebar.inactive {
-  margin-left: -26em;
+  margin-left: -30em;
 }
 @media screen and (max-width: 1680px) {
   #sidebar {
@@ -2615,14 +2625,14 @@ button:disabled,
     width: 7.25em;
   }
   #sidebar .toggle:before {
-    color: #7f888f;
+    color: #19AA8D;
     margin-left: -0.0625em;
     margin-top: -0.25em;
     font-size: 1.1rem;
     z-index: 1;
   }
   #sidebar .toggle:after {
-    background: rgba(222, 225, 226, 0.75);
+    background: rgba(255, 255, 255, 0.75);
     border-radius: 0.375em;
     content: "";
     height: 3.5em;
@@ -2648,6 +2658,11 @@ button:disabled,
   top: 0;
   z-index: 1;
 }
+@media only screen and (max-width: 580px) {
+  #header {
+    Border-bottom: solid 3px #19AA8D;
+  }
+}
 #header > * {
   -moz-flex: 1;
   flex: 1;
@@ -2664,6 +2679,12 @@ button:disabled,
   border-bottom: none;
   border-right: solid 1px #e4e6e7;
 }
+@media only screen and (max-width: 580px) {
+  #header li a {
+    font-size: 0.7em;
+    padding: 0px 10px 0px 10px;
+  }
+}
 #header .logo {
   border-bottom: 0;
   color: inherit;
@@ -2675,13 +2696,10 @@ button:disabled,
 }
 @media screen and (max-width: 1680px) {
   #header {
-    padding-top: 5em;
+    padding-top: 2em;
   }
 }
 @media screen and (max-width: 736px) {
-  #header {
-    padding-top: 6.5em;
-  }
   #header .logo {
     font-size: 1.25em;
     margin: 0;
@@ -2873,8 +2891,13 @@ button:disabled,
   height: 6px;
   background-color: #425668;
   border-radius: 50%;
-  left: 6%;
-  transform: translateY(-16px);
+  left: 6.5%;
+  transform: translateY(-1.25em);
+}
+@media only screen and (max-width: 1280px) {
+  #menu > ul > li > ul li::after {
+    left: 6%;
+  }
 }
 #menu > ul > li > ul > li {
   margin: 0.125em 0 0 0;
@@ -2891,9 +2914,11 @@ button:disabled,
 }
 #menu .profile img {
   max-width: 140px;
+  border-radius: 50%;
+  margin-bottom: 1.5em;
 }
 #menu .profile p {
-  margin-left: 1em;
+  margin-left: 0.6em;
   line-height: 0.5em;
   color: #DFD6D2;
 }/*# sourceMappingURL=main.css.map */

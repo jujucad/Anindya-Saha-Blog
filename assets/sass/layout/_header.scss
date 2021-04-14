@@ -11,11 +11,13 @@
 	#header {
 		@include vendor('display', 'flex');
 		border-bottom: solid 5px _palette(accent);
-		padding: 2em 0 1em 0;
+		padding:2em 0 1em 0;
 		position: sticky;
 		top:0;
 		z-index: 1;
-
+		@media only screen and (max-width: 580px){
+			Border-bottom: solid 3px _palette(accent);
+		}
 
 		> * {
 			@include vendor('flex', '1');
@@ -30,6 +32,9 @@
 			padding: 0px 20px 0px 20px;
 			border-bottom: none;
 			border-right: solid 1px 	hsl(206, 7%, 90%);
+			@media only screen and (max-width: 580px){
+				font-size: .7em;
+				padding: 0px 10px 0px 10px;}
 			}
 		}
 		
@@ -46,12 +51,11 @@
 		}
 
 		@include breakpoint('<=xlarge') {
-			padding-top: 5em;
+			padding-top: 2em;
 		}
 
 		@include breakpoint('<=small') {
-			padding-top: 6.5em;
-
+			// padding-top: 6.5em;
 			.logo {
 				font-size: 1.25em;
 				margin: 0;
