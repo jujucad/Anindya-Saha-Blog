@@ -11,10 +11,12 @@
 	#header {
 		@include vendor('display', 'flex');
 		border-bottom: solid 5px _palette(accent);
+		background-color: #FFF;
 		padding:2em 0 1em 0;
 		position: sticky;
 		top:0;
 		z-index: 1;
+		text-transform: uppercase;
 		@media only screen and (max-width: 580px){
 			Border-bottom: solid 3px _palette(accent);
 		}
@@ -22,6 +24,9 @@
 		> * {
 			@include vendor('flex', '1');
 			margin-bottom: 0;
+		}
+		ul{
+			flex-basis: 90%;
 		}
 		li{
 			float: right;
@@ -35,6 +40,31 @@
 			@media only screen and (max-width: 580px){
 				font-size: .7em;
 				padding: 0px 10px 0px 10px;}
+			}
+		}
+		a{
+			@include icon(false, solid);
+			flex-basis: 10%;
+			flex-grow:unset;
+			text-decoration: none;
+			
+		}
+
+		P{
+			i{
+			content: "\f0c9";
+			font-size: 2rem;
+			height: inherit;
+			line-height: inherit;
+			position: absolute;
+			text-indent: 0;
+			top:1.120em;
+			@media only screen and (max-width: 1280px){
+				top:.52em;
+			}
+			left: 0;
+			width: inherit;
+			color: _palette(accent);
 			}
 		}
 		
