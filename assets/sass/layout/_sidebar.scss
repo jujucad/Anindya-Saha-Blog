@@ -68,8 +68,7 @@
 			@include padding($pad, $pad, (0, 0, $pad, 0));
 			position: relative;
 			width: _size(sidebar-width);
-			height: 100VH;
-			overflow: AUTO;
+			
 			> * {
 				// border-bottom: solid 2px _palette(border);
 				margin: 0 0 (_size(element-margin) * 1.75) 0;

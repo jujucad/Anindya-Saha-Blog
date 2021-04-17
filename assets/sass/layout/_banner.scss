@@ -17,16 +17,19 @@
 		.content {
 			@include vendor('flex-grow', '1');
 			@include vendor('flex-shrink', '1');
-			width: 50%;
-		}
+			width: 70%;
+			}
 
 		.image {
 			@include vendor('flex-grow', '0');
 			@include vendor('flex-shrink', '0');
 			display: block;
 			margin: 0 (_size(element-margin) * 2) _size(element-margin) 0;
-			width: 50%;
-
+			width: 30%;
+			@media only screen and (max-width: 812px){
+				order:1;
+			}
+			
 			img {
 				height: 100%;
 				-moz-object-fit: cover;
@@ -69,6 +72,7 @@
 			@include breakpoint('<=xsmall') {
 				.image {
 					max-height: 35vh;
+					
 				}
 			}
 		}
