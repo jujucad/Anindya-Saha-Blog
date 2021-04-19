@@ -40,8 +40,44 @@
 									</span>
 									<div class="content">
 										<header>
-											<h2>Hi, I’m Editorial<br />
-											by HTML5 UP</h2>
+											<h2>Category<br />
+											Kaggle</h2>
+											<p>A free and fully responsive site template</p>
+										</header>
+										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+										<ul class="actions">
+											<li><a href="#" class="button big">Learn More</a></li>
+										</ul>
+									</div>
+								
+								</section>
+							<!-- Arcticle -->
+								<section id="banner">
+									<span class="image object">
+										<img src="images/pic10.jpg" alt="" />
+									</span>
+									<div class="content">
+										<header>
+											<h2>Category<br />
+											Spark</h2>
+											<p>A free and fully responsive site template</p>
+										</header>
+										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+										<ul class="actions">
+											<li><a href="#" class="button big">Learn More</a></li>
+										</ul>
+									</div>
+								
+								</section>
+							<!-- Arcticle -->
+								<section id="banner">
+									<span class="image object">
+										<img src="images/pic10.jpg" alt="" />
+									</span>
+									<div class="content">
+										<header>
+											<h2>Category<br />
+											Spark</h2>
 											<p>A free and fully responsive site template</p>
 										</header>
 										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
@@ -111,11 +147,38 @@
 								</nav>
 							<!-- Category Buttons -->
 							<div class="category">
-								<a href="#" class="button primary small">Kaggle</a>
-								<a href="#" class="button primary small">Spark</a>
-								<a href="#" class="button primary small">Machnie Learning</a>
-								<a href="#" class="button primary small">Data Science</a>
+								<a href="#" class="button primary small disabled" id="category" value="All">All</a>
+								<a href="#" class="button primary small" id="category" value="Kaggle">Kaggle</a>
+								<a href="#" class="button primary small" id="category">Spark</a>
+								<a href="#" class="button primary small" id="category">Machnie Learning</a>
+								<a href="#" class="button primary small" id="category">Data Science</a>
+								<script>
 
+									// Add Event Listerner to Button
+									var catSelected = document.querySelectorAll('#category');
+									var articleSelection = document.querySelectorAll("#banner")
+
+									for (let i=0; i < catSelected.length; i++){
+										catSelected[i].addEventListener("click", function(){
+											
+									//Unselect All Button remove previous filter
+											for (let i=0; i < catSelected.length; i++){
+												catSelected[i].classList.remove("disabled");				
+											}
+									//Select the Button on which on I clicked.
+										this.classList.add('disabled');
+									//Look at all articles in the page
+									
+											// for(let i=0; i < articleSelection.length; i++){
+											// 	if (articleSelection[i].classList.contains(catSelected[i].values)){
+											// 		articleSelection[i].style.visibility="visible";
+											// 	}else{
+											// 		articleSelection[i].style.visibility="hidden";
+											// 	}
+											// }
+									})
+									}
+								</script>
 							</div>
 							<!-- Social Media Links -->
 						<div class="social">
