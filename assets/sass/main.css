@@ -2761,7 +2761,7 @@ button:disabled,
   flex-grow: 1;
   -ms-flex-shrink: 1;
   flex-shrink: 1;
-  width: 70%;
+  width: 60%;
 }
 #banner .image {
   -moz-flex-grow: 0;
@@ -2771,7 +2771,7 @@ button:disabled,
   flex-shrink: 0;
   display: block;
   margin: 0 4em 2em 0;
-  width: 30%;
+  width: 40%;
 }
 @media only screen and (max-width: 812px) {
   #banner .image {
@@ -2966,6 +2966,7 @@ button:disabled,
   max-width: 110px;
   border-radius: 50%;
   margin-bottom: 1.5em;
+  border: solid 4px #f56a6a;
 }
 #menu .profile p {
   margin-left: 0.6em;
