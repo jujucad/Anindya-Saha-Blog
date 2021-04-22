@@ -21,20 +21,19 @@
 
 $(function () {
     // Grab the template script
-    var theTemplateScript = $("#article-template").html();
+    var theTemplateScript = $("#banner-template").html();
   
     // Compile the template
     var theTemplate = Handlebars.compile(theTemplateScript);
   
     // Define our data object
     var articles={
-      article1:{
-      "link": "https://nbviewer.jupyter.org/github/anindya-saha/Machine-Learning-with-Python/blob/master/kaggle-bike-sharing-demand/kaggle-bike-sharing-demand.ipynb",  
-    }};
+      "title": "My super Title",  
+    };
   
     // Pass our data to the template
     var theCompiledHtml = theTemplate(articles);
   
     // Add the compiled html to the page
-    $('#myarticle').html(theCompiledHtml);
+    $('.myarticle').html(theCompiledHtml);
   });

@@ -25,7 +25,7 @@
 								<header id="header">
 									<p><i class="fas fa-bars" onclick="menuToggle()"></i></a></p>
 											<ul>
-												<li><a href="#">HOME</a></li>
+												<li><a href="index.html">HOME</a></li>
 												<li><a href="#">ABOUT</a></li>
 												<li><a href="#">RESUME</a></li>
 												<li><a href="#">EXPERIENCE</a></li>
@@ -64,7 +64,7 @@
 										</header>
 										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
 										<ul class="actions">
-											<li><a href="#" class="button big">Learn More</a></li>
+											<li><a href="articles copy.html" class="button big">Learn More</a></li>
 										</ul>
 									</div>
 								
@@ -82,12 +82,32 @@
 										</header>
 										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
 										<ul class="actions">
+											<li><a href="articles copy 2.html" class="button big">Learn More</a></li>
+										</ul>
+									</div>
+								
+								</section>
+							<!-- Arcticle -->
+							<script id="banner-template" type="text/x-handlebars-template">
+								<section id="banner" class="spark">
+									<span class="image object">
+										<img src="images/pic10.jpg" alt="" />
+									</span>
+									<div class="content">
+										<header>
+											<h2>Category<br />
+											Spark</h2>
+											<p>{{title}}</p>
+										</header>
+										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+										<ul class="actions">
 											<li><a href="#" class="button big">Learn More</a></li>
 										</ul>
 									</div>
 								
 								</section>
-
+								</script>
+<div class="myarticle"></div>
 									<section class=pages>
 									<ul class="pagination">
 										<li><span class="button disabled">Prev</span></li>
@@ -206,10 +226,13 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous"></script>
+			<script src="assets/data/articles.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
 			<script>
 				// When the user scrolls the page, execute myFunction
 				window.onscroll = function () { myFunction() };
