@@ -62,8 +62,8 @@
 					</header id="myarticle">
 					
 					<iframe
-						src="https://nbviewer.jupyter.org/github/anindya-saha/Machine-Learning-with-Python/blob/master/kaggle-bike-sharing-demand/kaggle-bike-sharing-demand.ipynb"
-						frameborder="0" scrolling="no" height="28600" width="100%">
+						src=""
+						frameborder="0" scrolling="no" height="" width="100%">
 					</iframe>
 					
 					<!-- <style>
@@ -188,7 +188,9 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 	<script src="/assets/data/articles.js"></script>
+	<script>iframeSetting()</script>
 	<script>
 		// When the user scrolls the page, execute myFunction
 		window.onscroll = function () { myFunction() };
@@ -205,17 +207,6 @@
 				header.classList.add("sticky");
 			} else {
 				header.classList.remove("sticky");
-			}
-		}
-	</script>
-	<script>
-		function menuToggle() {
-			var elem = document.getElementById('sidebar')
-			if (elem.classList.contains("inactive")) {
-				elem.classList.remove("inactive");
-			}
-			else {
-				elem.classList.add("inactive")
 			}
 		}
 	</script>

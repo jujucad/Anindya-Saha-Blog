@@ -34,78 +34,26 @@
 								</header>
 
 							<!-- Arcticle -->
-								<section id="banner" class="kaggle"  >
-									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-									<div class="content">
-										<header>
-											<h2>Category<br />
-											Kaggle</h2>
-											<p>A free and fully responsive site template</p>
-										</header>
-										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-										<ul class="actions">
-											<li><a href="articles.html" class="button big">Learn More</a></li>
-										</ul>
-									</div>
-								
-								</section>
-							<!-- Arcticle -->
-								<section id="banner" class="spark">
-									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-									<div class="content">
-										<header>
-											<h2>Category<br />
-											Spark</h2>
-											<p>A free and fully responsive site template</p>
-										</header>
-										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-										<ul class="actions">
-											<li><a href="articles copy.html" class="button big">Learn More</a></li>
-										</ul>
-									</div>
-								
-								</section>
-							<!-- Arcticle -->
-								<section id="banner" class="spark">
-									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-									<div class="content">
-										<header>
-											<h2>Category<br />
-											Spark</h2>
-											<p>A free and fully responsive site template</p>
-										</header>
-										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-										<ul class="actions">
-											<li><a href="articles copy 2.html" class="button big">Learn More</a></li>
-										</ul>
-									</div>
-								
-								</section>
-							<!-- Arcticle -->
 							<script id="banner-template" type="text/x-handlebars-template">
-								<section id="banner" class="spark">
+								{{#each articles}}
+								<section id="banner" class="{{categories}}">
 									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
+										<img src={{image}} alt="" />
 									</span>
 									<div class="content">
 										<header>
-											<h2>Category<br />
-											Spark</h2>
-											<p>{{title}}</p>
+											<h2>{{{title}}}
+											</h2>
+											<p>{{sub-title}}</p>
 										</header>
-										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+										<p>{{description}}</p>
 										<ul class="actions">
-											<li><a href="#" class="button big">Learn More</a></li>
+											<li><a href="articles.html" class="button big" onclick="iframeCookies({{jupiter-link}},'{{iframe-height}}')">Learn More</a></li>
 										</ul>
 									</div>
 								
 								</section>
+								{{/each}}
 								</script>
 <div class="myarticle"></div>
 									<section class=pages>
@@ -143,24 +91,24 @@
 										<li>
 											<span class="opener"><i class="fa fa-cog"></i>Machine Learning</span>
 											<ul>
-												<li><a href="#">Predicitng Bike Sharing Demand</a></li>
-												<li><a href="#">Cassava Leaf Disease Classification</a></li>
+												<li><a href="articles.html" onclick="iframeCookies('https://nbviewer.jupyter.org/github/anindya-saha/Machine-Learning-with-Python/blob/master/kaggle-bike-sharing-demand/kaggle-bike-sharing-demand.ipynb','28600')">Predicitng Bike Sharing Demand</a></li>
+												<li><a href="articles.html" onclick="iframeCookies('link','height')">Cassava Leaf Disease Classification</a></li>
 											</ul>
 										</li>
 										<li>
 											<span class="opener"><i class="fas fa-chart-area"></i>Data Science</span>
 											<ul>
-												<li><a href="#">Spooky Author Classification</a></li>
-												<li><a href="#">Retaial Database Analysis</a></li>					
+												<li><a href="articles.html" onclick="iframeCookies('link','height')">Spooky Author Classification</a></li>
+												<li><a href="articles.html" onclick="iframeCookies('link','height')">Retaial Database Analysis</a></li>					
 											</ul>
 										</li>
 										<li>
 											<span class="opener"><i class="fas fa-chart-bar"></i>Data Analysis</span>
 											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
+												<li><a href="articles.html" onclick="iframeCookies('link','height')">Lorem Dolor</a></li>
+												<li><a href="articles.html" onclick="iframeCookies('link','height')">Ipsum Adipiscing</a></li>
+												<li><a href="articles.html" onclick="iframeCookies('link','height')">Tempus Magna</a></li>
+												<li><a href="articles.html" onclick="iframeCookies('link','height')">Feugiat Veroeros</a></li>
 											</ul>
 										</li>
 									</ul>
@@ -227,12 +175,13 @@
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 			<script src="assets/data/articles.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			
 			<script>
 				// When the user scrolls the page, execute myFunction
 				window.onscroll = function () { myFunction() };
@@ -250,17 +199,6 @@
 					} else {
 						header.classList.remove("sticky");
 					}
-				}
-			</script>
-			<script>
-				function menuToggle(){
-				var elem = document.getElementById('sidebar')
-				if (elem.classList.contains("inactive")){
-					  elem.classList.remove("inactive");
-				  }
-				  else {
-					  elem.classList.add("inactive")
-				  }
 				}
 			</script>
 
