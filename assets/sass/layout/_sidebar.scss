@@ -57,6 +57,9 @@
 			position:sticky;
 			width: 100%;
 			top: 90vh;
+			a{
+				color:_palette(fg)  !important;
+			}
 			@media only screen and (max-width: 1280px){
 				position: absolute;
 				}					

@@ -1,3 +1,4 @@
+//Handlebars Custom if Function
 Handlebars.registerHelper('if_eq', function(a,b,opts){
   if (a == b){
     return opts.fn(this);
@@ -6,84 +7,41 @@ Handlebars.registerHelper('if_eq', function(a,b,opts){
   }
 });
 
-//Handlebars Templating compile and data
+//Handlebars Templating for MENU
 $(function () {
-    // Grab the template script
-    var theTemplateScript = $("#banner-template").html();
+    // Grab the template script    
     var menuMLTemplateScript =$("#menu-template-machineLearning").html();
     var menuDSTemplateScript =$("#menu-template-dataScience").html();
     var menuDATemplateScript =$("#menu-template-dataAnalysis").html();
+   
     // Compile the template
-    var theTemplate = Handlebars.compile(theTemplateScript);
-    // add the person partial
-    
    var menuMLTemplate = Handlebars.compile(menuMLTemplateScript);
    var menuDSTemplate = Handlebars.compile(menuDSTemplateScript);
    var menuDATemplate = Handlebars.compile(menuDATemplateScript);
-
-    // Define our data object
-  var articles = {
-    "articles": [
-      {
-        "id": "001",
-        "title": "My super Title",
-        "sub-title": "Kaggle Category",
-        "description": "My super Description",
-        "categories": "kaggle",
-        "jupiter-link":"'https://nbviewer.jupyter.org/github/anindya-saha/Machine-Learning-with-Python/blob/master/kaggle-bike-sharing-demand/kaggle-bike-sharing-demand.ipynb'",
-        "iframe-height":"28600",
-        "image":"images/pic10.jpg",
-        "menu":"Machine Learning"
-      },
-      {
-        "id": "002",
-        "title": "My super Title 2",
-        "sub-title": "Spark Category",
-        "description": "My super Description 2",
-        "categories": "spark",
-        "jupiter-link":"'https://nbviewer.jupyter.org/github/anindya-saha/Data-Science-with-Spark/blob/master/working-with-nested-data-types/working-with-nested-data-types.ipynb'",
-        "iframe-height":"1100",
-        "image":"images/pic10.jpg",
-        "menu":"Data Science"
-      },
-      {
-        "id": "003",
-        "title": "My super Title 3",
-        "sub-title": "Spark Category",
-        "description": "My super Description 3",
-        "categories": "spark",
-        "jupiter-link":"'https://nbviewer.jupyter.org/github/anindya-saha/Data-Science-with-Spark/blob/master/retail-db-advanced-sql-analysis/retail-database-analysis-python.ipynb'",
-        "iframe-height":"6100",
-        "image":"images/pic10.jpg",
-        "menu":"Data Science"
-      },
-      {
-        "id": "004",
-        "title": "My super Title 4",
-        "sub-title": "Spark Category",
-        "description": "My super Description 4",
-        "categories": "spark",
-        "jupiter-link":"'https://nbviewer.jupyter.org/github/anindya-saha/Data-Science-with-Spark/blob/master/retail-db-advanced-sql-analysis/retail-database-analysis-python.ipynb'",
-        "iframe-height":"6100",
-        "image":"images/pic10.jpg",
-        "menu":"Data Analysis"
-      }
-    ]
-  };
   
-    // Pass our data to the template
-    var theCompiledHtml = theTemplate(articles);
+    // Pass our data to the template    
     var menuMLCompileHtml = menuMLTemplate(articles);
     var menuDSCompileHtml = menuDSTemplate(articles);
     var menuDACompileHtml = menuDATemplate(articles);
-
  
     // Add the compiled html to the page
-   $('.myarticle').html(theCompiledHtml);
    $('.mymenu-machineLearning').html(menuMLCompileHtml);
    $('.mymenu-dataScience').html(menuDSCompileHtml);
    $('.mymenu-dataAnalysis').html(menuDACompileHtml);
   });
+
+
+//Handlebars TEMPLATING FOR ARTICLE INDEX PAGE
+HandlebarsArticles = () => {
+  // Grab the template script 
+  var theTemplateScript = $("#banner-template").html();
+  // Compile the template
+  var theTemplate = Handlebars.compile(theTemplateScript);
+  // Pass our data to the template
+  var theCompiledHtml = theTemplate(articles);
+  // Add the compiled html to the page
+  $('.myarticle').html(theCompiledHtml);
+}
 
 
 //Parse the article info in cookies 
@@ -111,3 +69,53 @@ function menuToggle() {
 }
 
 
+// CATEGORY FILTER
+	// Add Event Listerner to Button
+	var catSelected = document.querySelectorAll('#category');
+		
+									for (let i=0; i < catSelected.length; i++){
+										catSelected[i].addEventListener("click", function(){
+											
+									//Unselect All Button remove previous filter
+											for (let i=0; i < catSelected.length; i++){
+												catSelected[i].classList.remove("disabled");				
+											}
+									//Select the Button on which on I clicked.
+										this.classList.add('disabled');
+
+									//Look at all articles in the page
+									let filter = this.getAttribute('data-filter');
+									var articleSelection = document.querySelectorAll("#banner");
+
+											  for(let i=0; i < articleSelection.length; i++){
+													articleSelection[i].style.display="flex";
+											  	if (articleSelection[i].classList.contains(filter) | filter == "All" ){
+											 		 console.log(true);
+													 articleSelection[i].style.display="flex";
+											 	 }else{
+													articleSelection[i].style.display="none";
+												  }	 
+									}
+									})
+								}
+
+
+
+ // TOP HEADER MENU STICKY ON TOP               
+				// When the user scrolls the page, execute myFunction
+				window.onscroll = function () { myFunction() };
+
+				// Get the header
+				var header = document.getElementById("header");
+
+				// Get the offset position of the navbar
+				var sticky = header.offsetTop;
+
+				// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+				function myFunction() {
+					if (window.pageYOffset > sticky) {
+						header.classList.add("sticky");
+					} else {
+						header.classList.remove("sticky");
+					}
+				}

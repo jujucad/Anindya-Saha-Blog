@@ -37,148 +37,99 @@
 
 				</header>
 
-			
-
-
-
-				  <!-- <script id="articleTemplate" type="text/x-handlebars-template"">
-					<iframe
-					src={{articles.article_1.link}}
-					frameborder="0" scrolling="no" height="28600" width="100%" onload="resizeIframe(this)" />
-					</iframe>
-
-				  </script> -->
-
-
-
-
-
-
-
 				<!-- Content -->
-				<section>
-					<header class="main">
+				<section style="padding: 3em 0;">
+					<!-- <header class="main">
 						<h1>Solution 1</h1>
-					</header id="myarticle">
+					</header id="myarticle"> -->
 					
 					<iframe
 						src=""
 						frameborder="0" scrolling="no" height="" width="100%">
 					</iframe>
-					
-					<!-- <style>
-						iframe {
-							width: 100%;
-							/* height:28600px; */
-							/* min-height: 100VH; */
-						}
-					</style> -->
-					<!-- <script type="text/javascript">
-						function resizeIframe(obj) {
-							obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 20'px';
-						}
-					</script> -->
 				</section>
 			</div>
 		</div>
 
-		<!-- Sidebar -->
-		<div id="sidebar">
-			<div class="inner">
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+						
+						
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<div class="profile">
+										<img class="picture" src="images/profile.jpg" alt="">
+										<p>Anindya Saha</p>
+										<p>Machine Learning Engineer</p>
+									</div>
+									
 
-				<!-- Menu -->
-				<nav id="menu">
-					<header class="major">
-						<div class="profile">
-							<img class="picture" src="images/profile.jpg" alt="">
-							<p>Anindya Saha</p>
-							<p>Machine Learning Engineer</p>
+								</header>
+								<ul>
+									<li>
+										<span class="opener"><i class="fa fa-cog"></i>Machine Learning</span>
+										<ul class="mymenu-machineLearning">
+											<script id="menu-template-machineLearning" type="text/x-handlebars-template">
+												{{#each articles}}
+													{{#if_eq menu 'Machine Learning'}}
+														<li><a href="articles.html" onclick="iframeCookies({{jupiter-link}},'{{iframe-height}}')">{{title}}</a></li>
+													{{/if_eq}}
+												{{/each}}
+											</script>
+										</ul>
+									</li>
+									<li>
+										<span class="opener"><i class="fas fa-chart-area"></i>Data Science</span>
+										<ul class="mymenu-dataScience">
+											<script id="menu-template-dataScience" type="text/x-handlebars-template">
+												{{#each articles}}
+													{{#if_eq menu 'Data Science'}}
+														<li><a href="articles.html" onclick="iframeCookies({{jupiter-link}},'{{iframe-height}}')">{{title}}</a></li>
+													{{/if_eq}}
+												{{/each}}
+											</script>
+							
+										</ul>
+									</li>
+									<li>
+										<span class="opener"><i class="fas fa-chart-bar"></i>Data Analysis</span>
+										<ul class="mymenu-dataAnalysis">
+											
+										<script id="menu-template-dataAnalysis" type="text/x-handlebars-template">
+											{{#each articles}}
+												{{#if_eq menu 'Data Analysis'}}
+													<li><a href="articles.html" onclick="iframeCookies({{jupiter-link}},'{{iframe-height}}')">{{title}}</a></li>
+												{{/if_eq}}
+											{{/each}}
+										</script>
+
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						<!-- Category Buttons -->
+						<div class="category">
+							<a href="#" class="button primary small disabled" id="category" data-filter="All">All</a>
+							<a href="#" class="button primary small" id="category" data-filter="kaggle">Kaggle</a>
+							<a href="#" class="button primary small" id="category" data-filter="spark">Spark</a>
+							<a href="#" class="button primary small" id="category" data-filter="">Machnie Learning</a>
+							<a href="#" class="button primary small" id="category" data-filter="">Data Science</a>
+						
 						</div>
 
-
-					</header>
-					<ul>
-						<li>
-							<span class="opener"><i class="fa fa-cog"></i>Machine Learning</span>
-							<ul>
-								<li><a href="#">Predicitng Bike Sharing Demand</a></li>
-								<li><a href="#">Cassava Leaf Disease Classification</a></li>
-							</ul>
-						</li>
-						<li>
-							<span class="opener"><i class="fas fa-chart-area"></i>Data Science</span>
-							<ul>
-								<li><a href="#">Spooky Author Classification</a></li>
-								<li><a href="#">Retaial Database Analysis</a></li>
-							</ul>
-						</li>
-						<li>
-							<span class="opener"><i class="fas fa-chart-bar"></i>Data Analysis</span>
-							<ul>
-								<li><a href="#">Lorem Dolor</a></li>
-								<li><a href="#">Ipsum Adipiscing</a></li>
-								<li><a href="#">Tempus Magna</a></li>
-								<li><a href="#">Feugiat Veroeros</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-				<!-- Category Buttons -->
-				<div class="category">
-					<a href="#" class="button primary small disabled" id="category" data-filter="All">All</a>
-					<a href="#" class="button primary small" id="category" data-filter="kaggle">Kaggle</a>
-					<a href="#" class="button primary small" id="category" data-filter="spark">Spark</a>
-					<a href="#" class="button primary small" id="category" data-filter="">Machnie Learning</a>
-					<a href="#" class="button primary small" id="category" data-filter="">Data Science</a>
-
-					<script>
-
-						// Add Event Listerner to Button
-						var catSelected = document.querySelectorAll('#category');
-
-
-
-						for (let i = 0; i < catSelected.length; i++) {
-							catSelected[i].addEventListener("click", function () {
-
-								//Unselect All Button remove previous filter
-								for (let i = 0; i < catSelected.length; i++) {
-									catSelected[i].classList.remove("disabled");
-								}
-								//Select the Button on which on I clicked.
-								this.classList.add('disabled');
-
-								//Look at all articles in the page
-								let filter = this.getAttribute('data-filter');
-								var articleSelection = document.querySelectorAll("#banner");
-
-								for (let i = 0; i < articleSelection.length; i++) {
-									articleSelection[i].style.display = "flex";
-									if (articleSelection[i].classList.contains(filter) | filter == "All") {
-										console.log(true);
-										articleSelection[i].style.display = "flex";
-									} else {
-										articleSelection[i].style.display = "none";
-									}
-									//  classList.contains(catSelected[i].values)){)
-									// 	articleSelection[i].style.visibility="visible";
-
-
-								}
-							})
-						}
-					</script>
+				
+				
+					</div>
+					<!-- Social Media Links -->
+					<div class="social">
+						<a href="https://www.linkedin.com/in/anindyacs/"><i class="fab fa-linkedin-in"></i></a>
+						<a href="https://github.com/anindya-saha"><i class="fab fa-github"></i></a>
+						<a href="callto:1-562-867-5309"><i class="fa fa-phone"></i></a>
+						<a href="mailto: mail.anindya@gmail.com"><i class="far fa-envelope"></i></a>
+					</div>	
 				</div>
-				<!-- Social Media Links -->
-				<div class="social">
-					<i class="fab fa-linkedin-in"></i>
-					<i class="fab fa-github"></i>
-					<i class="fa fa-phone"></i>
-					<i class="far fa-envelope"></i>
-				</div>
-			</div>
-
-		</div>
 
 	</div>
 
@@ -189,27 +140,10 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous"></script>
+	<script src="/assets/data/data.js"></script>
 	<script src="/assets/data/articles.js"></script>
 	<script>iframeSetting()</script>
-	<script>
-		// When the user scrolls the page, execute myFunction
-		window.onscroll = function () { myFunction() };
-
-		// Get the header
-		var header = document.getElementById("header");
-
-		// Get the offset position of the navbar
-		var sticky = header.offsetTop;
-
-		// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-		function myFunction() {
-			if (window.pageYOffset > sticky) {
-				header.classList.add("sticky");
-			} else {
-				header.classList.remove("sticky");
-			}
-		}
-	</script>
 
 </body>
 

@@ -2485,6 +2485,9 @@ button:disabled,
   width: 100%;
   top: 90vh;
 }
+#sidebar .social a {
+  color: #7f888f !important;
+}
 @media only screen and (max-width: 1280px) {
   #sidebar .social {
     position: absolute;
