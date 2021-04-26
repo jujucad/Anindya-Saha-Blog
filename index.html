@@ -54,7 +54,7 @@
 								
 								</section>
 								{{/each}}
-								</script>
+							</script>
 <div class="myarticle"></div>
 									<section class=pages>
 									<ul class="pagination">
@@ -75,7 +75,8 @@
 				<!-- Sidebar -->
 					<div id="sidebar">
 						<div class="inner">
-
+							
+							
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
@@ -90,25 +91,43 @@
 									<ul>
 										<li>
 											<span class="opener"><i class="fa fa-cog"></i>Machine Learning</span>
-											<ul>
-												<li><a href="articles.html" onclick="iframeCookies('https://nbviewer.jupyter.org/github/anindya-saha/Machine-Learning-with-Python/blob/master/kaggle-bike-sharing-demand/kaggle-bike-sharing-demand.ipynb','28600')">Predicitng Bike Sharing Demand</a></li>
-												<li><a href="articles.html" onclick="iframeCookies('link','height')">Cassava Leaf Disease Classification</a></li>
+											<ul class="mymenu-machineLearning">
+												<script id="menu-template-machineLearning" type="text/x-handlebars-template">
+													{{#each articles}}
+														{{#if_eq menu 'Machine Learning'}}
+															<li><a href="articles.html" onclick="iframeCookies({{jupiter-link}},'{{iframe-height}}')">Lorem Dolor</a></li>
+														{{/if_eq}}
+													{{/each}}
+												</script>
 											</ul>
 										</li>
 										<li>
 											<span class="opener"><i class="fas fa-chart-area"></i>Data Science</span>
-											<ul>
-												<li><a href="articles.html" onclick="iframeCookies('link','height')">Spooky Author Classification</a></li>
-												<li><a href="articles.html" onclick="iframeCookies('link','height')">Retaial Database Analysis</a></li>					
+											<ul class="mymenu-dataScience">
+												<script id="menu-template-dataScience" type="text/x-handlebars-template">
+													{{#each articles}}
+														{{#if_eq menu 'Data Science'}}
+															<li><a href="articles.html" onclick="iframeCookies({{jupiter-link}},'{{iframe-height}}')">Lorem Dolor</a></li>
+														{{/if_eq}}
+													{{/each}}
+												</script>
+								
 											</ul>
 										</li>
 										<li>
 											<span class="opener"><i class="fas fa-chart-bar"></i>Data Analysis</span>
-											<ul>
-												<li><a href="articles.html" onclick="iframeCookies('link','height')">Lorem Dolor</a></li>
-												<li><a href="articles.html" onclick="iframeCookies('link','height')">Ipsum Adipiscing</a></li>
+											<ul class="mymenu-dataAnalysis">
+												
+											<script id="menu-template-dataAnalysis" type="text/x-handlebars-template">
+												{{#each articles}}
+													{{#if_eq menu 'Data Analysis'}}
+														<li><a href="articles.html" onclick="iframeCookies({{jupiter-link}},'{{iframe-height}}')">Lorem Dolor</a></li>
+													{{/if_eq}}
+												{{/each}}
+											</script>
+												<!-- <li><a href="articles.html" onclick="iframeCookies('link','height')">Ipsum Adipiscing</a></li>
 												<li><a href="articles.html" onclick="iframeCookies('link','height')">Tempus Magna</a></li>
-												<li><a href="articles.html" onclick="iframeCookies('link','height')">Feugiat Veroeros</a></li>
+												<li><a href="articles.html" onclick="iframeCookies('link','height')">Feugiat Veroeros</a></li> -->
 											</ul>
 										</li>
 									</ul>
@@ -120,7 +139,8 @@
 								<a href="#" class="button primary small" id="category" data-filter="spark">Spark</a>
 								<a href="#" class="button primary small" id="category" data-filter="">Machnie Learning</a>
 								<a href="#" class="button primary small" id="category" data-filter="">Data Science</a>
-								
+							
+							
 								<script>
 
 									// Add Event Listerner to Button
@@ -166,12 +186,14 @@
 							<i class="fa fa-phone"></i>
 							<i class="far fa-envelope"></i>
 						</div>
+					
+					
 						</div>
 						
 					</div>
 
 			</div>
-
+		
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous"></script>
