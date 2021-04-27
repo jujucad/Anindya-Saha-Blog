@@ -2425,6 +2425,25 @@ button:disabled,
   }
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #e8ebed;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #f56a6a;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 3px solid #f56a6a;
+  /* creates padding around scroll thumb */
+}
+
 /* Sidebar */
 #search form {
   text-decoration: none;
@@ -2477,7 +2496,7 @@ button:disabled,
 #sidebar .social {
   font-size: 3em;
   height: 100px;
-  background-color: #3d4449;
+  background-color: #e3e6e8;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -2487,6 +2506,9 @@ button:disabled,
 }
 #sidebar .social a {
   color: #7f888f !important;
+}
+#sidebar .social a :hover {
+  color: #f56a6a;
 }
 @media only screen and (max-width: 1280px) {
   #sidebar .social {
