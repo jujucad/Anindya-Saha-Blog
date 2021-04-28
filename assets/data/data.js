@@ -24,7 +24,7 @@
         "jupiter-link":"'https://nbviewer.jupyter.org/github/anindya-saha/Data-Science-with-Spark/blob/master/working-with-nested-data-types/working-with-nested-data-types.ipynb'",
         "iframe-height":"11048",
         "image":"images/kaggle-spotify.png",
-        "menu":"Data Science"
+        "menu":"Data Science with Spark"
       },
       {
         "id": "003",
@@ -35,7 +35,18 @@
         "jupiter-link":"'https://nbviewer.jupyter.org/github/anindya-saha/Data-Science-with-Spark/blob/master/retail-db-advanced-sql-analysis/retail-database-analysis-python.ipynb'",
         "iframe-height":"60359",
         "image":"images/spark-retail-db.jpeg",
-        "menu":"Data Science"
+        "menu":"Data Science with Spark"
+      },
+       {
+        "id": "004",
+        "title": "Sanfrancisco Crime Analysis",
+        "sub-title": "data-science,data-analysis",
+        "description": "A comprehensive tutorial on Spark 2.2 DataFrame and SQL APIs and a side by side comparison of both approaches. It is based on a near real-life dataset of a fictitious Retail store provided by Cloudera. I have compiled while this I am learning and implementing Spark for Data Mining at work. The use cases implemented range from simple to quite complex to cover as many possible different Spark functions and complicated SQL variations.",
+        "categories": ["data-science","data-analysis"],
+        "jupiter-link":"'https://nbviewer.jupyter.org/github/anindya-saha/Data-Science-with-Spark/blob/master/retail-db-advanced-sql-analysis/retail-database-analysis-python.ipynb'",
+        "iframe-height":"60359",
+        "image":"images/spark-retail-db.jpeg",
+        "menu":"Data Analysis"
       }
     ]
   };
