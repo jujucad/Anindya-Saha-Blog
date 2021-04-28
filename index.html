@@ -36,7 +36,7 @@
 							<!-- Arcticle -->
 							<script id="banner-template" type="text/x-handlebars-template">
 								{{#each articles}}
-								<section id="banner" class="{{categories}}">
+								<section id="banner" class="{{#each categories}}{{this}} {{/each}}">
 									<span class="image object">
 										<img src={{image}} alt="" />
 									</span>
@@ -44,7 +44,9 @@
 										<header>
 											<h2>{{{title}}}
 											</h2>
-											<p>{{sub-title}}</p>
+											{{#each categories}}
+											<span id="category" class="button primary small tiny" data-filter="{{this}}" > {{this}} </span>
+											{{/each}}
 										</header>
 										<p>{{description}}</p>
 										<ul class="actions">

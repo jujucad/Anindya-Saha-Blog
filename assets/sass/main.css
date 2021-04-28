@@ -2060,6 +2060,14 @@ button.primary:active,
 .button.primary:active {
   background-color: #f45c5c;
 }
+input[type=submit].tiny,
+input[type=reset].tiny,
+input[type=button].tiny,
+button.tiny,
+.button.tiny {
+  font-size: 0.45em;
+  font-weight: 900;
+}
 input[type=submit].disabled, input[type=submit]:disabled,
 input[type=reset].disabled,
 input[type=reset]:disabled,
@@ -2561,7 +2569,7 @@ body::-webkit-scrollbar-thumb {
 #sidebar .social {
   font-size: 3em;
   height: 100px;
-  background-color: #e3e6e8;
+  background-color: #dde0e4;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -2571,6 +2579,7 @@ body::-webkit-scrollbar-thumb {
 }
 #sidebar .social a {
   color: #7f888f !important;
+  border: none;
 }
 #sidebar .social a :hover {
   color: #f56a6a;
