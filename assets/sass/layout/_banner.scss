@@ -18,6 +18,9 @@
 			@include vendor('flex-grow', '1');
 			@include vendor('flex-shrink', '1');
 			width: 60%;
+			p{
+				text-align: justify;
+			}
 			}
 
 		.image {

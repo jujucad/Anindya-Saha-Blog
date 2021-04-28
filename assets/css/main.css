@@ -2870,6 +2870,9 @@ body::-webkit-scrollbar-thumb {
   flex-shrink: 1;
   width: 60%;
 }
+#banner .content p {
+  text-align: justify;
+}
 #banner .image {
   -moz-flex-grow: 0;
   -ms-flex-grow: 0;
