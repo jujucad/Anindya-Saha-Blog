@@ -50,12 +50,34 @@ function iframeCookies(link, height) {
   Cookies.set('height', height, { expires: 7 });
 }
 
-//Get article info from cookies and set it in iframe
-function iframeSetting() {
-  iSetting = document.querySelector('iframe')
-  iSetting.src = Cookies.get('link');
-  iSetting.height = Cookies.get('height');
+// After the page is load i creat the iframe and load it in the page.
+window.onload = function iframeSetting() {
+  // iSetting = document.querySelector('iframe')
+  section = document.querySelector('#section');
+  iSettingSrc = Cookies.get('link');
+  iSettingHeight = Cookies.get('height');
+
+  var ifrm = document.createElement("iframe");
+  ifrm.setAttribute("src", iSettingSrc);
+  ifrm.setAttribute("id", "iframe");
+  ifrm.style.width = "100%";
+  ifrm.style.opacity="0";
+  section.appendChild(ifrm);
+
+  document.querySelector('#iframe').height=iSettingHeight;
+  spinner();
 }
+// Query the elements to hide the spinner beccause the iframe is loaded
+function spinner() {
+  // Hide the loading indicator
+const iframeEle = document.getElementById('iframe');
+const loadingEle = document.getElementById('loading');
+iframeEle.onload = function(){ 
+  loadingEle.style.display = 'none';
+  iframeEle.style.opacity=1;
+}
+
+};
 
 // Toggle Function to show hide the menu
 function menuToggle() {
@@ -121,14 +143,4 @@ function menuToggle() {
 				}
 
 
-// Query the elements
-const iframeEle = document.getElementById('iframe');
-const loadingEle = document.getElementById('loading');
 
-iframeEle.addEventListener('load', function() {
-  // Hide the loading indicator
-  loadingEle.style.display = 'none';
-
-  // Bring the iframe back
-  iframeEle.style.opacity = 1;
-});
