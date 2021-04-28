@@ -2901,6 +2901,8 @@ body::-webkit-scrollbar-thumb {
   -o-object-position: center;
      object-position: center;
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media screen and (orientation: portrait) {
   #banner {
