@@ -37,7 +37,7 @@
         "image":"images/spark-retail-db.jpeg",
         "menu":"Data Science with Spark"
       },
-       {
+      {
         "id": "004",
         "title": "Sanfrancisco Crime Analysis",
         "sub-title": "data-science,data-analysis",
