@@ -60,6 +60,7 @@ window.onload = function iframeSetting() {
   var ifrm = document.createElement("iframe");
   ifrm.setAttribute("src", iSettingSrc);
   ifrm.setAttribute("id", "iframe");
+  ifrm.setAttribute("scrolling", "no");
   ifrm.style.width = "100%";
   ifrm.style.opacity="0";
   section.appendChild(ifrm);
