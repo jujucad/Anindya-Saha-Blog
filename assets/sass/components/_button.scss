@@ -76,6 +76,10 @@
 				background-color: darken(_palette(accent), 3);
 			}
 		}
+		&.tiny{
+			font-size:0.45em;
+			font-weight: 900;
+		}
 
 		&.disabled,
 		&:disabled {

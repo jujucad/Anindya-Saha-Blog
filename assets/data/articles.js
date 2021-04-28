@@ -41,6 +41,7 @@ HandlebarsArticles = () => {
   var theCompiledHtml = theTemplate(articles);
   // Add the compiled html to the page
   $('.myarticle').html(theCompiledHtml);
+  catfilter();
 }
 
 
@@ -94,6 +95,7 @@ function menuToggle() {
 
 // CATEGORY FILTER
 	// Add Event Listerner to Button
+  catfilter = () =>{
 	var catSelected = document.querySelectorAll('#category');
 		
 									for (let i=0; i < catSelected.length; i++){
@@ -121,7 +123,7 @@ function menuToggle() {
 									}
 									})
 								}
-
+              }
 
 
  // TOP HEADER MENU STICKY ON TOP               
